@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    color: rgb(84, 84, 84);
+    background-color: #fff;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+
+}
+.container-externo{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://images.pexels.com/photos/3608056/pexels-photo-3608056.jpeg?cs=srgb&dl=pexels-laura-penwell-3608056.jpg&fm=jpg");
+    background-repeat: no-repeat;
+    
+    background-size: cover;
+}
+.flex-container{
+    z-index: 2;
+    display: flex;
+    max-width: 400pt;
+    width: 100%;
+    background-color: rgba(248, 248, 248,0.8);
+    padding: 5pt;
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 8pt;
+    padding-top: 25pt;
+    padding-bottom: 25pt;
+    min-height: 400pt;
+    max-height: 400pt;
+}
+.blur{
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    max-width: 410pt;
+    min-height: 400pt;
+    width: 100%;
+    background-color: rgba(35, 35, 35, 0.8);
+    filter:blur(5px);
+}
+.center{
+    justify-content: center;
+    align-items: center;
+}
+.col{
+    flex-direction: column;
+}
+.row{
+    flex-direction: row;
+}
+.entrada{
+    display: flex;
+    padding: 5pt;
+    min-width: 80%;
+    justify-content: center;
+    margin: 5pt;
+}
+.entrada div{
+    margin: 5pt;
+}
+button{
+    padding: 3pt;
+}
+input{
+    padding: 3pt;
+}
+.tarefas{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex: 1;
+    overflow: auto;
+    width: 100%;
+    
+}
+.tarefa{
+    padding: 5pt;
+    margin-left: 20pt;
+    margin-right: 20pt;
+    display: flex;
+   
+}
+.marcado{
+    color: rgb(183, 183, 183);
+    text-decoration: dashed;
+    text-decoration:line-through;
+}
+.about{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    margin-right: 15pt;
+    color: rgb(169, 169, 169);
+    font-size: 8pt;
+}
+input[type='checkbox']{
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 12pt;
+    height: 12pt;
+}
