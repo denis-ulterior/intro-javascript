@@ -13,29 +13,28 @@ function init() {
 //funcao geral 
 function navegacao() {
    //seleciona o botao
-   inputBtn = document.getElementById("botao")
+   const inputBtn = document.getElementById("botao")
 
    //adiciona o observador ao botao e executa a arrow function
    inputBtn.addEventListener("click", () => {
-      inputValue = document.getElementById("entrada").value
-      console.log(inputValue)
+      let inputValue = document.getElementById("entrada").value
+      //console.log(inputValue)
       adicionarTarefa(inputValue)
       document.getElementById("entrada").value = ''
    })
-
 
    function checkBox() {
       //console.log('aqui')
       let checkedBoxes = document.getElementsByName('tarefa');
       //console.log(checkedBoxes)
       for (let c of checkedBoxes) {
-      if(c.checked == true){
-         //console.log(c.checked)
-         c.parentElement.classList.add("marcado")
-      }else{
-         //console.log(c.checked)
-         c.parentElement.classList.remove("marcado")
-      }
+         if (c.checked == true) {
+            //console.log(c.checked)
+            c.parentElement.classList.add("marcado")
+         } else {
+            //console.log(c.checked)
+            c.parentElement.classList.remove("marcado")
+         }
       }
    }
 
@@ -50,6 +49,6 @@ function navegacao() {
       node.appendChild(subNode)
       subNode.appendChild(inputNode)
       subNode.innerHTML += "&nbsp" + tarefa
-      document.getElementById(tarefa).addEventListener('change',checkBox)
+      document.getElementById(tarefa).addEventListener('change', checkBox)
    }
 }

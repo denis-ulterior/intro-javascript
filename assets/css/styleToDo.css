@@ -22,7 +22,8 @@ body{
 .flex-container{
     z-index: 2;
     display: flex;
-    max-width: 400pt;
+    max-width: 300pt;
+    min-width: 200pt;
     width: 100%;
     background-color: rgba(248, 248, 248,0.8);
     padding: 5pt;
@@ -30,15 +31,16 @@ body{
     border-radius: 8pt;
     padding-top: 25pt;
     padding-bottom: 25pt;
-    min-height: 400pt;
-    max-height: 400pt;
+    min-height: 300pt;
+    max-height: 300pt;
 }
 .blur{
     z-index: 1;
     position: absolute;
     display: flex;
-    max-width: 410pt;
-    min-height: 400pt;
+    max-width: 300pt;
+    min-width: 200pt;
+    min-height: 300pt;
     width: 100%;
     background-color: rgba(35, 35, 35, 0.8);
     filter:blur(5px);
@@ -105,4 +107,16 @@ input[type='checkbox']{
     margin-bottom: auto;
     width: 12pt;
     height: 12pt;
+}
+@media(max-width: 850pt){
+    .entrada{
+        flex-direction: column;
+        align-items: center;
+    }
+    .blur{
+        width: 80%;
+    }
+    .flex-container{
+        width: 80%;
+    }
 }
